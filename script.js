@@ -23,7 +23,9 @@ const months = [
   "December",
 ];
 
-let timeBox = document.querySelector(".time-box");
+let hourBox = document.querySelector(".hour-box");
+let minBox = document.querySelector(".min-box");
+let secBox = document.querySelector(".sec-box");
 let dateBox = document.querySelector(".date-box");
 
 setInterval(() => {
@@ -40,6 +42,8 @@ setInterval(() => {
   let month = d.getMonth();
   let year = d.getFullYear();
 
-  timeBox.textContent = `${hr} : ${min} : ${sec}`;
+  hourBox.textContent = `${hr}`;
+  minBox.textContent = `${min}`;
+  secBox.textContent = `${sec}`;
   dateBox.textContent = `${week[day]}, ${months[month]} ${date}, ${year}`;
 }, 100);
